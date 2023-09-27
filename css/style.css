@@ -71,9 +71,8 @@ body:after {
   border-radius: 30px;
   padding: 10px 30px; }
   .btn:hover, .btn:active, .btn:focus {
-    outline: none;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
+    outline: 5px auto -webkit-focus-ring-color;}
+    
   .btn.btn-primary {
     background: #137790;
     border-color: #137790;
@@ -98,8 +97,6 @@ body:after {
   font-weight: 500 !important;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
-  .form-control:active, .form-control:focus {
-    outline: 5px auto -webkit-focus-ring-color; }
     
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
@@ -134,13 +131,14 @@ body:after {
   .site-footer .border-top {
     border-top: 1px solid rgba(255, 255, 255, 0.1) !important; }
   .site-footer p {
-    color: #737373; }
+    color: #ffffffdf; }
   .site-footer h2, .site-footer h3, .site-footer h4, .site-footer h5 {
     color: #fff; }
   .site-footer a {
-    color: #999999; }
+    color: #c6f3ff !important;
+  text-decoration: underline;}
     .site-footer a:hover {
-      color: white; }
+      background-color: rgba(170, 241, 255, 0.331); }
   .site-footer ul li {
     margin-bottom: 10px; }
   .site-footer .footer-heading {
@@ -292,7 +290,8 @@ body:after {
     .site-navbar .site-navigation .site-menu .active {
       color: #137790;
       display: inline-block;
-      padding: 5px 20px; }
+      padding: 5px 20px;
+      font-weight: 900; }
     .site-navbar .site-navigation .site-menu a {
       text-decoration: none !important;
       display: inline-block; }
@@ -304,7 +303,8 @@ body:after {
         display: inline-block;
         text-decoration: none !important; }
         .site-navbar .site-navigation .site-menu > li > a:hover {
-          color: #137790; }
+          color: #137790;
+          font-weight: 600; }
     .site-navbar .site-navigation .site-menu .has-children {
       position: relative; }
       .site-navbar .site-navigation .site-menu .has-children > a {
@@ -360,7 +360,9 @@ body:after {
           transition: 0s all;
           color: #000; }
         .site-navbar .site-navigation .site-menu .has-children .dropdown .active {
-          color: #137790 !important; }
+          color: #137790 !important;
+          font-size: bold !important;
+         }
         .site-navbar .site-navigation .site-menu .has-children .dropdown > li {
           list-style: none;
           padding: 0;
@@ -381,7 +383,8 @@ body:after {
       .site-navbar .site-navigation .site-menu .has-children:hover > a, .site-navbar .site-navigation .site-menu .has-children:focus > a, .site-navbar .site-navigation .site-menu .has-children:active > a {
         color: #137790; }
       .site-navbar .site-navigation .site-menu .has-children:hover, .site-navbar .site-navigation .site-menu .has-children:focus, .site-navbar .site-navigation .site-menu .has-children:active {
-        cursor: pointer; }
+        cursor: pointer;
+      }
         .site-navbar .site-navigation .site-menu .has-children:hover > .dropdown, .site-navbar .site-navigation .site-menu .has-children:focus > .dropdown, .site-navbar .site-navigation .site-menu .has-children:active > .dropdown {
           -webkit-transition-delay: 0s;
           -o-transition-delay: 0s;
@@ -462,7 +465,9 @@ body:after {
       position: relative;
       display: block; }
       .site-mobile-menu .site-nav-wrap li .active {
-        color: #137790; }
+        color: #137790;
+        font-size: bold !important;
+      }
     .site-mobile-menu .site-nav-wrap .arrow-collapse {
       position: absolute;
       right: 0px;
@@ -2054,3 +2059,16 @@ figure figcaption {
     z-index: 4;
     -webkit-box-shadow: 0 4px 40px -4px rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 40px -4px rgba(0, 0, 0, 0.4); }
+
+  output {
+      background-color: #731212;
+      outline: #fff;
+      color: #fff;
+      padding: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    output:empty{
+      padding: 0;
+    }

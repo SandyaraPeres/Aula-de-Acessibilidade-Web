@@ -324,11 +324,11 @@
               <div class="paws">
                 <span class="icon-paw"></span>
               </div>
-              <h1 class="text-black mb-2">Depoimentos</h1>
+              <h2 class="text-black mb-2">Depoimentos</h2>
             </div>
           </div>
-          <div>
-            <div class="row">
+
+            <div class="row" role="list">
   
               <div class="col-lg-4">
                 <div class="block-testimony-1 text-center">
@@ -338,11 +338,10 @@
                   </blockquote>
   
                   <figure>
-                    <img src="images/pet_carinho_img_depoimento_1.png" alt="Image" class="img-fluid rounded-circle mx-auto">
+                    <img src="images/pet_carinho_img_depoimento_1.png" alt="" class="img-fluid rounded-circle mx-auto">
                   </figure>
-                  <h3 class="font-size-20 mb-4 text-black">Pedro Ferreira</h3>
-  
-                  
+                  <p class="font-size-20 mb-4 text-black" id="depo1" aria-hidden="true">Pedro Ferreira</p>
+                
                 </div>
               </div>
   
@@ -354,9 +353,9 @@
                   </blockquote>
   
                   <figure>
-                    <img src="images/pet_carinho_img_depoimento_2.png" alt="Image" class="img-fluid rounded-circle mx-auto">
+                    <img src="images/pet_carinho_img_depoimento_2.png" alt="" class="img-fluid rounded-circle mx-auto">
                   </figure>
-                  <h3 class="font-size-20 text-black">Ana Silveira</h3>
+                  <p class="font-size-20 text-black" id="depo2">Ana Silveira</p>
                 </div>
               </div>
   
@@ -368,16 +367,16 @@
                   </blockquote>
   
                   <figure>
-                    <img src="images/pet_carinho_img_depoimento_3.png" alt="Image" class="img-fluid rounded-circle mx-auto">
+                    <img src="images/pet_carinho_img_depoimento_3.png" alt="" class="img-fluid rounded-circle mx-auto">
                   </figure>
-                  <h3 class="font-size-20 mb-4 text-black">João da Silva</h3>
+                  <p class="font-size-20 mb-4 text-black" id="depo3">João da Silva</p>
   
                   
                 </div>
               </div>
   
           </div>
-        </div>
+
       </section>
   
       <section id="blog" class="site-section">
@@ -482,17 +481,8 @@
                 
                 <h2 class="h4 mb-5 heading text-white font-weight-bold">Fale conosco</h2> 
   
-                <div class="row form-group">
-                  <div class="col-md-6 mb-3 mb-md-0">
-                    <label>Nome</label>
-                    <input type="text" id="fname" class="form-control">
-                  </div>
-                  <div class="col-md-6">
-                    <label>Sobrenome</label>
-                    <input type="text" id="lname" class="form-control">
-                  </div>
-                </div>
-  
+                <output id="feedback" role="alert" aria-live="assertive" tabindex="0" class="error"></output>
+
                 <div class="row form-group">
                   
                   <div class="col-md-12">
@@ -505,7 +495,7 @@
                   
                   <div class="col-md-12">
                     <label>Assunto</label> 
-                    <input type="subject" id="subject" class="form-control">
+                    <input id="subject" type="subject" class="form-control">
                   </div>
                 </div>
   
@@ -514,21 +504,12 @@
                     <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Escreva sua mensagem..."></textarea>
                   </div>
                 </div>
-  
-  
-                <!-- <div class="row form-group">
-                  <div class="col-md-12">
-                    <div class="g-recaptcha" data-sitekey="6LfSmj0oAAAAAHaj9EpmDkKuG64lAPlGHimWWuSx"></div>
-                  </div>
-                </div> -->
-  
-  
+
                 <div class="row form-group">
                   <div class="col-md-12">
-                    <input type="submit" value="Enviar mensagem" class="btn btn-dark btn-md text-white">
+                    <button id="formButton" type="submit" class="btn btn-dark btn-md text-white">Enviar mensagem</button>
                   </div>
                 </div>
-  
     
               </form>
             </div>
@@ -559,10 +540,10 @@
               </div>
               <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Redes sociais</h2>
-                <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                <a href="#" class="pl-0 pr-3" aria-label="Facebook"><span class="icon-facebook"></span></a>
+                <a href="#" class="pl-3 pr-3" aria-label="Twitter"><span class="icon-twitter"></span></a>
+                <a href="#" class="pl-3 pr-3" aria-label="Instagram"><span class="icon-instagram"></span></a>
+                <a href="#" class="pl-3 pr-3" aria-label="LinkedIn"><span class="icon-linkedin"></span></a>
               </div>
             </div>
           </div>
@@ -592,6 +573,7 @@
   <script src="js/jquery.fancybox.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/form.js"></script>
 
   
   <script src="js/main.js"></script>
