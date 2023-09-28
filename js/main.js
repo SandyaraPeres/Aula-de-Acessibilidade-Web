@@ -33,10 +33,17 @@
 			var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 			if(reg.test(email.value)) {
-				//
+				email.setAttribute("aria-invalid", "false");
+				alert("Cadastro realizado com sucesso!")
+
+				email.innerHTML = "";
+				subject.innerHTML = "";
+				message.innerHTML="";
 
 			} else {
-				//
+				email.setAttribute("aria-invalid", "true");
+				feedback.innerHTML = "O formulário apresenta erros que impedem a finalização do seu envio. Confira se todos os campos obrigatórios foram preenchidos."
+				feedback.focus();
 			}
 	
 		  }

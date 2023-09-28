@@ -97,6 +97,9 @@ body:after {
   font-weight: 500 !important;
   font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
 
+  .form-control:active, .form-control:focus{
+    outline: 5px auto -webkit-focus-ring-color;
+  }
     
   .form-control:hover, .form-control:active, .form-control:focus {
     -webkit-box-shadow: none !important;
@@ -291,7 +294,8 @@ body:after {
       color: #137790;
       display: inline-block;
       padding: 5px 20px;
-      font-weight: 900; }
+      font-weight: 900;
+    }
     .site-navbar .site-navigation .site-menu a {
       text-decoration: none !important;
       display: inline-block; }
@@ -612,7 +616,7 @@ body:after {
       margin-left: auto;
       margin-right: auto; } }
   .site-blocks-cover p {
-    color: #999999;
+    color: #0e0e0e;
     font-size: 1.2rem;
     line-height: 1.5;
     font-weight: 300; }
@@ -1350,7 +1354,7 @@ body:after {
     .listing-item .listing-item-content span {
       color: #fff; }
     .listing-item .listing-item-content .address {
-      color: rgba(255, 255, 255, 0.9); }
+      color: rgba(255, 255, 255, 0.947); }
   .listing-item .bookmark {
     position: absolute;
     right: 20px;
@@ -1877,7 +1881,7 @@ figure figcaption {
       transform: translate(-50%, -50%); }
 
 .address li {
-  color: #efefef;
+  color: #fff;
   margin-bottom: 20px; }
   .address li span {
     color: #fff; }
@@ -1991,7 +1995,7 @@ figure figcaption {
     background-color: #1377903c;}
 
 .blog-entry .blog-entry-text .post-meta {
-  color: #858585; }
+  color: #686868; }
 
 .block-testimony-1 {
   padding: 20px; }
@@ -2071,4 +2075,38 @@ figure figcaption {
 
     output:empty{
       padding: 0;
+    }
+
+    .skip-to-content-link{
+      background: #137790;
+      left: 10%;
+      padding: 8px;
+      position: absolute;
+      transform: translateY(-100%);
+      transition: transform 0.3s;
+    }
+
+    .skin-to-content-link:focus{
+      transform: translateY(0%);
+    }
+
+    .blog-entry{
+      position:relative;
+    }
+
+    .blog-entry a::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+
+    .blog-entry:focus-within{
+      outline: 5px solid black;
+    }
+
+    .blog-entry a:focus {
+      outline: none;
     }
